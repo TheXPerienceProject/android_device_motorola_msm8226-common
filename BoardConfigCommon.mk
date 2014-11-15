@@ -120,7 +120,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    $(LOCAL_PATH)/sepolicy
+    device/motorola/msm8226-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     adbd.te \
