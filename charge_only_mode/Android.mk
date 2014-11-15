@@ -14,6 +14,7 @@ LOCAL_SRC_FILES += \
     screen.c
 
 LOCAL_STATIC_LIBRARIES := libunz libcutils libc liblog
+LOCAL_FORCE_STATIC_EXECUTABLE := true
 
 LOCAL_C_INCLUDES := external/zlib
 
