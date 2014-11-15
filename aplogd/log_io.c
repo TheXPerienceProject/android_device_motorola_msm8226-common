@@ -47,6 +47,12 @@
 #include "rambuf.h"
 #include "aplogd.h"
 #include "aplogd_util.h"
+
+/* LOGGER */
+#include <sys/ioctl.h>
+#define __LOGGERIO 0xAE
+#define LOGGER_GET_LOG_LEN _IO(__LOGGERIO, 2) /* used log len */
+
 /************************
  * Local defines and macros
  ************************/
