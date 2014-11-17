@@ -13,6 +13,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true
 
+#Default to AwesomePlayer
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.use-awesome=true
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.calfile0=/etc/Bluetooth_cal.acdb \
     persist.audio.calfile1=/etc/General_cal.acdb \
