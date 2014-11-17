@@ -169,3 +169,6 @@ ifeq ($(HOST_OS),linux)
  endif
 endif
 WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
+
+# Enable Minikin text layout engine (will be the default soon)
+USE_MINIKIN := true
