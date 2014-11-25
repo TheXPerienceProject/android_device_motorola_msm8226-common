@@ -224,12 +224,10 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
-    hostpad \
     hostapd.accept \
     hostapd.deny \
-    hostapd_default.conf \
-    libwpa_client \
-    wpa_suplicant \
+    hostapd \
+    wpa_supplicant \
     wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
