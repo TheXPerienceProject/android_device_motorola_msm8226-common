@@ -99,3 +99,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.qc.sub.rdump.on=1 \
     persist.sys.ssr.restart_level=3
+
+#Min freq
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.min_freq_0=787200
