@@ -181,3 +181,6 @@ WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 
 # Enable Minikin text layout engine (will be the default soon)
 USE_MINIKIN := true
+
+### Webkit and browser do not loose time on it
+PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
