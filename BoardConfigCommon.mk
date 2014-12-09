@@ -185,7 +185,7 @@ WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 USE_MINIKIN := true
 
 ### Webkit and browser do not loose time on it remove if not maked a first build before
-PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
+#PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
 
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
@@ -199,4 +199,4 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 
 
 #EXPERIMENTAL FEATURES
-TARGET_LDPRELOAD := libNimsWrap.so
+#TARGET_LDPRELOAD := libNimsWrap.so
