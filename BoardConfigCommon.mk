@@ -45,7 +45,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8226
 TARGET_NO_BOOTLOADER 	     := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE      := console=ttyHSL0,115200,n8 earlyprintk androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.write_protect=0 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE      := console=ttyHSL0,115200,n8 earlyprintk androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x37 vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.write_protect=0 androidboot.selinux=permissive
 BOARD_KERNEL_BASE         := 0x00000000
 BOARD_KERNEL_PAGESIZE     := 2048
 BOARD_KERNEL_SEPARATED_DT := true
@@ -185,7 +185,7 @@ WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 USE_MINIKIN := true
 
 ### Webkit and browser do not loose time on it remove if not maked a first build before
-#PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
+PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
 
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
@@ -196,7 +196,6 @@ MAX_EGL_CACHE_KEY_SIZE := 12*1024
 # binaries. Decrease the size if RAM or Flash Storage size is a limitation
 # of the device.
 MAX_EGL_CACHE_SIZE := 2048*1024
-
 
 #EXPERIMENTAL FEATURES
 #TARGET_LDPRELOAD := libNimsWrap.so
