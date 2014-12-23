@@ -204,5 +204,31 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 #Selinux
 -include device/qcom/sepolicy/sepolicy.mk
 
+BOARD_SEPOLICY_DIRS += \
+    device/motorola/msm8226-common/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    akmd8963.te \
+    atvc.te \
+    batt_health.te \
+    device.te \
+    file_contexts \
+   file.te \
+    init.te \
+    init_shell.te \
+    keystore.te \
+    mediaserver.te \
+    mm-pp-daemon.te \
+    mm-qcamerad.te \
+    mpdecision.te \
+    platform_app.te \
+    property_contexts \
+    property.te \
+    rild.te \
+    rmt_storage.te \
+    system_app.te \
+    thermal-engine.te
+
+
 #ril
-BOARD_RIL_CLASS := ../../../device/motorola/msm8226-common/ril/
+#BOARD_RIL_CLASS := ../../../device/motorola/msm8226-common/ril/
