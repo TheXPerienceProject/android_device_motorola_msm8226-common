@@ -134,13 +134,6 @@ PRODUCT_PACKAGES += \
     make_f2fs \
     mkf2fsuserimg.sh
 
-# FM
-PRODUCT_PACKAGES += \
-    FM2 \
-    FMRecord \
-    libqcomfm_jni \
-    qcom.fmradio
-
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8226
@@ -199,7 +192,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.crda.sh \
     init.qcom.bt.sh \
-    init.qcom.fm.sh \
     mount_pds.sh
 
 PRODUCT_PACKAGES += \
