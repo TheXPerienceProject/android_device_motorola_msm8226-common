@@ -199,3 +199,6 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 
 #EXPERIMENTAL FEATURES
 #TARGET_LDPRELOAD := libNimsWrap.so
+
+#Selinux
+-include device/qcom/sepolicy/sepolicy.mk
