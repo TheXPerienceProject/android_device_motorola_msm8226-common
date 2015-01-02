@@ -1,7 +1,15 @@
 [
   {
-    "repository": "android_device_qcom_common",
+    "repository": "Cyanogenmod/android_device_qcom_common",
     "target_path": "device/qcom/common"
-  }
+  },
+  {
+ "repository": "TheMuppets/proprietary_vendor_motorola",
+ "target_path": "vendor/motorola"
+ },
+ {
+ "repository": "XPerience-AOSP-Lollipop/android_kernel_motorola_msm8226",
+ "target_path": "kernel/motorola/msm8226"
+ }
 
 ]
