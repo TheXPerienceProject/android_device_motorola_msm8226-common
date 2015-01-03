@@ -203,3 +203,6 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 
 #Selinux
 -include device/qcom/sepolicy/sepolicy.mk
+
+#ril
+BOARD_RIL_CLASS := ../../../device/motorola/msm8226-common/ril/
