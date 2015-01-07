@@ -125,11 +125,6 @@ PRODUCT_PACKAGES += \
 
 # Filesystem
 PRODUCT_PACKAGES += \
-    e2fsck \
-    fsck.f2fs \
-    make_ext4fs \
-    mkfs.f2fs \
-    resize2fs \
     setup_fs \
     make_f2fs \
     mkf2fsuserimg.sh
