@@ -36,7 +36,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.ssr=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    use.dedicated.device.for.voip=false \
     use.voice.path.for.pcm.voip=true
 
 # Bluetooth
