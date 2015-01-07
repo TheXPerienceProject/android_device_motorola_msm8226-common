@@ -132,10 +132,10 @@ TARGET_USES_QCOM_BSP 	 := true
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON      	 := true
 BOARD_RECOVERY_SWIPE				 := true
-BOARD_SUPPRESS_EMMC_WIPE 	 		 := true
 BOARD_USE_CUSTOM_RECOVERY_FONT   	 := \"roboto_15x24.h\"
 TARGET_RECOVERY_PIXEL_FORMAT 	     := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4  	     := true
+COMMON_GLOBAL_CFLAGS 		     += -DNO_SECURE_DISCARD
 TARGET_RECOVERY_FSTYPE_MOUNT_OPTIONS := ext4=max_batch_time=0,commit=1,data=ordered,nobarrier,errors=panic,nodelalloc|f2fs=errors=recover
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 $(warning "USING F2FS for userdata")
