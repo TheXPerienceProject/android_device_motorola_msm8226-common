@@ -186,7 +186,7 @@ WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 USE_MINIKIN := true
 
 ### Webkit and browser do not loose time on it remove if not maked a first build before
-#PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
+PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
 
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
@@ -232,3 +232,10 @@ BOARD_SEPOLICY_UNION += \
 
 #ril
 #BOARD_RIL_CLASS := ../../../device/motorola/msm8226-common/ril/
+
+#symlink the webchromium
+#ln -sf out/target/product/falcon/system/lib/libwebviewchromium.so out/target/product/falcon/system/app/Webview/lib/arm/libwebviewchromium.so
+webcrhom:
+	ln -sf /system/lib/libwebviewchromium.so $(TARGET_OUT)/app/Webview/lib/arm/libwebviewchromium.so
+
+TARGET_WEBVIEW += webcrhom
