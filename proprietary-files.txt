@@ -62,7 +62,7 @@ vendor/lib/libmmcamera_hdr_gb_lib.so
 vendor/lib/libmmcamera_hdr_lib.so
 vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera_mt9m114.so
-vendor/lib/libmmcamera_sp1628.so
+vendor/lib/libmmcamera_s5k5e2.so
 vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tuning.so
 vendor/lib/libmmcamera_wavelet_lib.so
@@ -87,7 +87,6 @@ vendor/lib/libdrmtime.so
 vendor/lib/libQSEEComAPI.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
-vendor/lib/libStDrvInt.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
@@ -99,7 +98,6 @@ bin/hvdcp
 # GPS
 -app/com.qualcomm.location/com.qualcomm.location.apk
 -app/com.qualcomm.services.location/com.qualcomm.services.location.apk
--app/MotGeoFenceSvc/MotGeoFenceSvc.apk
 bin/location-mq
 bin/xtwifi-client
 bin/xtwifi-inet-agent
@@ -158,8 +156,6 @@ etc/firmware/a330_pm4.fw
 bin/imsdatadaemon
 bin/imsqmidaemon
 bin/ims_rtp_daemon
-etc/permissions/ims.xml
--framework/imslibrary.jar
 vendor/lib/lib-dplmedia.so
 vendor/lib/lib-imsdpl.so
 vendor/lib/lib-imsqimf.so
@@ -177,10 +173,8 @@ vendor/lib/lib-rtpsl.so
 vendor/lib/libmmrtpencoder.so
 
 # Listen service
-vendor/lib/liblistenhardware.so
-vendor/lib/liblistenjni.so
 vendor/lib/liblistensoundmodel.so
-vendor/lib/liblisten.so
+
 
 # Media
 vendor/lib/libDivxDrm.so
