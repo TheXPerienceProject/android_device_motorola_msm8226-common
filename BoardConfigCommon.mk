@@ -229,3 +229,7 @@ webcrhom:
 	ln -sf /system/lib/libwebviewchromium.so $(TARGET_OUT)/app/Webview/lib/arm/libwebviewchromium.so
 
 TARGET_WEBVIEW += webcrhom
+
+
+##config for neew recovery based on philz
+
