@@ -90,9 +90,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.use_data_netmgrd=true
 
-# Recovery
+# Storage
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cwm.forbid_format=/fsg,/firmware,/persist,/boot
+    persist.sys.isUsbOtgEnabled=true
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
