@@ -8,10 +8,6 @@
  "target_path": "vendor/motorola"
  },
  {
- "repository": "android_kernel_motorola_msm8226",
- "target_path": "kernel/motorola/msm8226"
- },
- {
   "repository": "android_hardware_qcom_fm",
   "target_path": "hardware/qcom/fm"
  }
