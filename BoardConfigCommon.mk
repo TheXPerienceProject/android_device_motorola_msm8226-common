@@ -53,7 +53,8 @@ BOARD_MKBOOTIMG_ARGS      := --ramdisk_offset 0x01000000 --tags_offset 0x0000010
 
 # Audio
 BOARD_USES_ALSA_AUDIO 	 	 	  			:= true
-AUDIO_FEATURE_DISABLED_FM 		   			:= true
+AUDIO_FEATURE_ENABLED_FM 	            := true
+#AUDIO_FEATURE_DISABLED_FM 		   			:= true
 AUDIO_FEATURE_ENABLED_COMPRESS_CAPTURE	    := true
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP 	    := true
 AUDIO_FEATURE_ENABLED_EXTN_FORMATS          := true
