@@ -51,13 +51,6 @@ BOARD_KERNEL_PAGESIZE     := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS      := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
-WLAN_MODULES:
-	mkdir -p $(KERNEL_MODULES_OUT)/pronto
-	mv $(KERNEL_MODULES_OUT)/wlan.ko $(KERNEL_MODULES_OUT)/pronto/pronto_wlan.ko
-	ln -sf /system/lib/modules/pronto/pronto_wlan.ko $(TARGET_OUT)/lib/modules/wlan.ko
-
-TARGET_KERNEL_MODULES += WLAN_MODULES
-
 # Audio
 BOARD_USES_ALSA_AUDIO 	 	 	  			:= true
 AUDIO_FEATURE_DISABLED_FM 		   			:= true
@@ -146,13 +139,13 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH     := /sys/devices/platform/msm_hsusb/gadget/lu
 
 # Wifi
 BOARD_HAS_QCOM_WLAN 		 	 := true
-BOARD_WLAN_DEVICE   		 	 := qcwcn
 BOARD_HOSTAPD_DRIVER   		 	 := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB 	 	 := lib_driver_cmd_qcwcn
-BOARD_WPA_SUPPLICANT_DRIVER 	 := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
-WIFI_DRIVER_MODULE_PATH  	 	 := "/system/lib/modules/wlan.ko"
-WIFI_DRIVER_MODULE_NAME 	 	 := "wlan"
+BOARD_WLAN_DEVICE   		 	 := qcwcn
+BOARD_WPA_SUPPLICANT_DRIVER 	         := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB         := lib_driver_cmd_qcwcn
+WIFI_DRIVER_FW_PATH_AP 			 := "ap"
+WIFI_DRIVER_FW_PATH_STA 		 := "sta"
 WPA_SUPPLICANT_VERSION 	  	 	 := VER_0_8_X
 
 # Include an expanded selection of fonts
