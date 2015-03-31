@@ -193,6 +193,9 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 #EXPERIMENTAL FEATURES
 #TARGET_LDPRELOAD := libNimsWrap.so
 
+# Release tools
+TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/msm8226-common
+
 #Selinux
 -include device/qcom/sepolicy/sepolicy.mk
 
