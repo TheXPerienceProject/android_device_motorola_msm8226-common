@@ -1,14 +1,14 @@
 [
   {
-    "repository": "android_device_qcom_common",
+    "repository": "Cyanogenmod/android_device_qcom_common",
     "target_path": "device/qcom/common"
   },
   {
- "repository": "proprietary_vendor_motorola",
+ "repository": "TheMuppets/proprietary_vendor_motorola",
  "target_path": "vendor/motorola"
  },
  {
-  "repository": "android_hardware_qcom_fm",
+  "repository": "Cyanogenmod/android_hardware_qcom_fm",
   "target_path": "hardware/qcom/fm"
  }
 
