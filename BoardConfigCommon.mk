@@ -34,7 +34,6 @@ TARGET_ARCH 			     		 := arm
 TARGET_ARCH_VARIANT 		     	 := armv7-a-neon
 TARGET_CPU_ABI 		 	     		 := armeabi-v7a
 TARGET_CPU_ABI2 		             := armeabi
-TARGET_CPU_SMP 	 	 	   			 := true
 TARGET_CPU_VARIANT 		    		 := krait
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION  := true
 TARGET_USE_KINGFISHER_OPTIMIZATION   := true
@@ -84,9 +83,6 @@ BLUETOOTH_HCI_USE_MCT     := true
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
-
-# Charger
-BOARD_CHARGING_MODE_BOOTING_LPM := /sys/mmi_lpm/lpm_mode
 
 # CMHW
 BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw/
@@ -152,6 +148,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH     := /sys/devices/platform/msm_hsusb/gadget/lu
 # Wifi
 BOARD_HAS_QCOM_WLAN 		 	 := true
 BOARD_WLAN_DEVICE   		 	 := qcwcn
+BOARD_HAS_QCOM_WLAN_SDK 		 := true
 BOARD_HOSTAPD_DRIVER   		 	 := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB 	 	 := lib_driver_cmd_qcwcn
 BOARD_WPA_SUPPLICANT_DRIVER 	 := NL80211
@@ -209,7 +206,6 @@ BOARD_SEPOLICY_UNION += \
     akmd8963.te \
     atvc.te \
     batt_health.te \
-    bootanim.te \
     device.te \
     file_contexts \
     file.te \
