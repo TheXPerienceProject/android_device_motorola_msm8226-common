@@ -183,12 +183,12 @@ PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
 # Shader cache config options
 # Maximum size of the  GLES Shaders that can be cached for reuse.
 # Increase the size if shaders of size greater than 12KB are used.
-MAX_EGL_CACHE_KEY_SIZE := 12*1024
+#MAX_EGL_CACHE_KEY_SIZE := 12*1024
 
 # Maximum GLES shader cache size for each app to store the compiled shader
 # binaries. Decrease the size if RAM or Flash Storage size is a limitation
 # of the device.
-MAX_EGL_CACHE_SIZE := 2048*1024
+#MAX_EGL_CACHE_SIZE := 2048*1024
 
 #EXPERIMENTAL FEATURES
 #TARGET_LDPRELOAD := libNimsWrap.so
@@ -229,7 +229,7 @@ BOARD_SEPOLICY_UNION += \
 #BOARD_RIL_CLASS := ../../../device/motorola/msm8226-common/ril/
 
 #symlink the webchromium
-#ln -sf out/target/product/falcon/system/lib/libwebviewchromium.so out/target/product/falcon/system/app/Webview/lib/arm/libwebviewchromium.so
+#ln -sf out/target/product/falcon/system/lib/libwebviewchromium.so out/target/product/falcon/system/app/webview/lib/arm/libwebviewchromium.so
 webcrhom:
 	ln -sf /system/lib/libwebviewchromium.so $(TARGET_OUT)/app/Webview/lib/arm/libwebviewchromium.so
 
