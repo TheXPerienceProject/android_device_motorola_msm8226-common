@@ -3,9 +3,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.24bit.enable=false \
     audio.offload.buffer.size.kb=32 \
     audio.offload.gapless.enabled=false \
-    audio.offload.multiple.enabled=false \
-    audio.offload.pcm.16bit.enable=true \
-    audio.offload.pcm.24bit.enable=true
+    audio.offload.multiple.enabled=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
     av.offload.enable=false \
@@ -13,10 +11,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.smoothstreaming=true
-
-#Default to AwesomePlayer
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.use-awesome=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.calfile0=/etc/Bluetooth_cal.acdb \
@@ -42,8 +36,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bt.le_dev_pwr_class=1 \
+    ro.bluetooth.dun=false \
     ro.bluetooth.hfp.ver=1.6 \
+    ro.bluetooth.sap=false \
+    ro.qualcomm.bluetooth.ftp=true \
+    ro.qualcomm.bluetooth.hfp=true \
+    ro.qualcomm.bluetooth.hsp=true \
+    ro.qualcomm.bluetooth.map=true \
+    ro.qualcomm.bluetooth.nap=true \
+    ro.qualcomm.bluetooth.opp=true \
+    ro.qualcomm.bluetooth.pbap=true \
     ro.qualcomm.bt.hci_transport=smd
+
+# Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera2.portability.force_api=1
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -86,7 +93,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=1 \
     persist.radio.dfr_mode_set=1 \
     persist.radio.msgtunnel.start=false \
-    persist.radio.no_wait_for_card=1
+    persist.radio.no_wait_for_card=1 \
+    rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.use_data_netmgrd=true
@@ -95,11 +103,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.isUsbOtgEnabled=true
 
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.usb.mtp=0x2e82 \
+    ro.usb.mtp_adb=0x2e76 \
+    ro.usb.ptp=0x2e83 \
+    ro.usb.ptp_adb=0x2e84 \
+    ro.usb.bpt=0x2e28 \
+    ro.usb.bpt_adb=0x2e29 \
+    ro.usb.bpteth=0x2e2a \
+    ro.usb.bpteth_adb=0x2e2b
+
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.qc.sub.rdump.on=1 \
     persist.sys.ssr.restart_level=3
 
-#Min freq
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.min_freq_0=787200
