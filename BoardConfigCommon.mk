@@ -222,7 +222,8 @@ BOARD_SEPOLICY_UNION += \
     rmt_storage.te \
     system_app.te \
     system_server.te \
-    thermal-engine.te
+    thermal-engine.te \
+    vold.te
 
 
 #ril
