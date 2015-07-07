@@ -177,6 +177,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.crda.sh \
     init.qcom.bt.sh \
+    init.qcom.ril.sh \
     mount_pds.sh
 
 PRODUCT_PACKAGES += \
