@@ -4,7 +4,7 @@
     "target_path": "device/qcom/common"
   },
   {
- "repository": "TheMuppets/proprietary_vendor_motorola",
+ "repository": "XPerience-AOSP-Lollipop/proprietary_vendor_motorola",
  "target_path": "vendor/motorola"
  },
  {
