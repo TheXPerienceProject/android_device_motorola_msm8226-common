@@ -119,3 +119,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.qc.sub.rdump.on=1 \
     persist.sys.ssr.restart_level=3
 
+#property to restrict number of cameras to 2
+#In L AOSP MAX camera defined as 4, compared to 2 in KK
+#Due to that and multimode architecture, camera on 8x26 target
+#will not work properly on KK as there are non-zero specific profile
+#exists in dtsi file, which is needed fo JB camera.
+persist.camera.num_cameras=2
