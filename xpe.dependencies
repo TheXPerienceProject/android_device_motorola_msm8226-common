@@ -4,6 +4,10 @@
     "target_path": "device/qcom/common"
   },
   {
+    "repository": "XPerience-AOSP-Lollipop/android_kernel_motorola_msm8226",
+    "target_path": "kernel/motorola/msm8226"
+  },
+  {
  "repository": "XPerience-AOSP-Lollipop/proprietary_vendor_motorola",
  "target_path": "vendor/motorola"
  },
