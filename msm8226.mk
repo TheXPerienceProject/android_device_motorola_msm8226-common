@@ -94,13 +94,6 @@ PRODUCT_PACKAGES += \
 #PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 #    camera2.portability.force_api=1
 
-# CRDA
-PRODUCT_PACKAGES += \
-    crda \
-    linville.key.pub.pem \
-    regdbdump \
-    regulatory.bin
-
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8226 \
@@ -174,7 +167,6 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    init.crda.sh \
     init.qcom.bt.sh \
     init.qcom.ril.sh \
     mount_pds.sh
