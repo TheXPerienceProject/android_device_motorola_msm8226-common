@@ -136,6 +136,8 @@ $(warning "USING F2FS for userdata")
 # TODO: make non-linux builds happy with external/f2fs-tool; system/extras/f2fs_utils
 ifeq ($(HOST_OS),linux)
 TARGET_USERIMAGES_USE_F2FS := true
+else
+TARGET_USERIMAGES_USE_F2FS := false
 endif
 
 LOCAL_FORCE_STATIC_EXECUTABLE := true
