@@ -105,3 +105,6 @@ camera.disable_treble=true
 
 #Low ram flag
 #ro.config.low_ram=true
+
+# Play store
+ro.com.google.clientidbase.gmm=android-motorola
