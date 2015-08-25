@@ -16,11 +16,11 @@
 # inherit from the proprietary version
 -include vendor/motorola/msm8226-common/BoardConfigVendor.mk
 
-LOCAL_PATH := device/motorola/msm8226-common
+VENDOR_PATH := device/motorola/msm8226-common
 
 BOARD_VENDOR := motorola-qcom
 
-TARGET_SPECIFIC_HEADER_PATH := device/motorola/msm8226-common/include
+TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
 
 #Qcom Kernel Header
 PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8x26/kernel-headers
@@ -78,8 +78,8 @@ AUDIO_FEATURE_ENABLED_PROXY_DEVICE	    := true
 AUDIO_FEATURE_ENABLED_USBAUDIO 	            := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
-BOARD_HAVE_BLUETOOTH 	  := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(VENDOR_PATH)/bluetooth
+BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT     := true
 
@@ -90,7 +90,7 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/mmi_lpm/lpm_mode
 
 # CMHW
-BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw/
+BOARD_HARDWARE_CLASS := $(VENDOR_PATH)/cmhw/
 
 # Display
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
@@ -117,6 +117,9 @@ CM_POWERHAL_EXTENSION := falcon
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE 	   := 131072
+
+# Properties
+TARGET_SYSTEM_PROP += $(VENDOR_PATH)/system.prop
 
 # Qualcomm support
 COMMON_GLOBAL_CFLAGS 	 += -DQCOM_BSP
@@ -193,13 +196,13 @@ USE_MINIKIN := true
 #TARGET_LDPRELOAD := libNimsWrap.so
 
 # Release tools
-TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/msm8226-common
+TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 
 #Selinux
 -include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
-    device/motorola/msm8226-common/sepolicy
+    $(VENDOR_PATH)/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     akmd8963.te \
