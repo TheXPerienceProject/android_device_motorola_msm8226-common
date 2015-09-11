@@ -129,16 +129,13 @@ TARGET_RECOVERY_PIXEL_FORMAT 	     := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4  	     := true
 COMMON_GLOBAL_CFLAGS 		     += -DNO_SECURE_DISCARD
 TARGET_RECOVERY_FSTYPE_MOUNT_OPTIONS := ext4=max_batch_time=0,commit=1,data=ordered,nobarrier,errors=panic,nodelalloc|f2fs=errors=recover
-BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
-$(warning "USING F2FS for userdata")
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
+#$(warning "USING F2FS for userdata")
 
 # This ensures the needed build tools are available.
 # TODO: make non-linux builds happy with external/f2fs-tool; system/extras/f2fs_utils
-ifeq ($(HOST_OS),linux)
-TARGET_USERIMAGES_USE_F2FS := true
-else
-TARGET_USERIMAGES_USE_F2FS := false
-endif
+
+
 
 LOCAL_FORCE_STATIC_EXECUTABLE := true
 
