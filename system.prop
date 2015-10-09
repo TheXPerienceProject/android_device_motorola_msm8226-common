@@ -104,3 +104,6 @@ ro.usb.bpteth_adb=0x2e2b
 # Wifi
 persist.sys.qc.sub.rdump.on=1
 persist.sys.ssr.restart_level=3
+
+#Enable multiwindow
+persist.sys.debug.multi_window=true
