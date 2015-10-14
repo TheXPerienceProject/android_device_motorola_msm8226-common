@@ -136,7 +136,7 @@ PRODUCT_COPY_FILES += \
 
 # Motorola
 PRODUCT_PACKAGES += \
-    aplogd 
+    libmoto
 
 # OMX
 PRODUCT_PACKAGES += \
