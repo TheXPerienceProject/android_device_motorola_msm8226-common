@@ -204,30 +204,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 BOARD_SEPOLICY_DIRS += \
     $(VENDOR_PATH)/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-    akmd8963.te \
-    atvc.te \
-    batt_health.te \
-    device.te \
-    file_contexts \
-    file.te \
-    init.te \
-    init_shell.te \
-    keystore.te \
-    mediaserver.te \
-    mm-qcamerad.te \
-    mpdecision.te \
-    platform_app.te \
-    property_contexts \
-    property.te \
-    rild.te \
-    rmt_storage.te \
-    system_app.te \
-    system_server.te \
-    thermal-engine.te \
-    vold.te
-
-
 #ril
 #BOARD_RIL_CLASS := ../../../device/motorola/msm8226-common/ril/
 
