@@ -178,8 +178,6 @@ lib/libmdmdetect.so
 lib/libmotext_inf.so
 lib/libqmimotext.so
 lib/libstlport.so
-lib/libxml2.so
-lib/libril.so
 vendor/lib/libcneapiclient.so
 vendor/lib/libconfigdb.so
 vendor/lib/libnetmgr.so
