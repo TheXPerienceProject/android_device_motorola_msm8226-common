@@ -87,6 +87,11 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 #    camera2.portability.force_api=1
 
+# Camera
+PRODUCT_PACKAGES += \
+    libboringssl-compat \
+    libxml2
+
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8226 \
