@@ -137,7 +137,7 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxVdec \
     libOmxVenc \
-    libOmxVidcCommon 
+    libOmxVidcCommon \
     libstagefrighthw \
     libextmedia_jni \
     qcmediaplayer
