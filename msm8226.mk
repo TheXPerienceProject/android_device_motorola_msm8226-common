@@ -140,12 +140,10 @@ PRODUCT_PACKAGES += \
     libOmxVidcCommon \
     libstagefrighthw \
     libextmedia_jni \
-    qcmediaplayer \
-    tcmiface
+    qcmediaplayer
 
 PRODUCT_BOOT_JARS += \
-    qcmediaplayer \
-    tcmiface
+    qcmediaplayer 
 
 # Power
 PRODUCT_PACKAGES += \
