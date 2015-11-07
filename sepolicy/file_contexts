@@ -3,6 +3,9 @@
 /system/bin/batt_health                                     u:object_r:batt_health_exec:s0
 /system/bin/dbvc_atvc_property_set                          u:object_r:atvc_exec:s0
 
+/system/bin/sensord                                         u:object_r:sensord_exec:s0
+/system/bin/dump_pds.sh                                     u:object_r:dump_pds_exec:s0
+
 # Camera
 /data/cam_socket([0-9])+                                    u:object_r:camera_socket:s0
 /data/fdAlbum                                               u:object_r:camera_data_file:s0
@@ -21,17 +24,16 @@
 /dev/socket/mpdecision                                      u:object_r:mpctl_socket:s0
 
 # Partitions
+/dev/block/bootdevice/by-name/boot                          u:object_r:boot_block_device:s0
+/dev/block/bootdevice/by-name/cache                         u:object_r:cache_block_device:s0
 /dev/block/bootdevice/by-name/cid                           u:object_r:cid_block_device:s0
 /dev/block/bootdevice/by-name/clogo                         u:object_r:clogo_block_device:s0
 /dev/block/bootdevice/by-name/dhob                          u:object_r:hob_block_device:s0
 /dev/block/bootdevice/by-name/hob                           u:object_r:hob_block_device:s0
 /dev/block/bootdevice/by-name/logs                          u:object_r:logs_block_device:s0
-/dev/block/bootdevice/by-name/boot                          u:object_r:boot_block_device:s0
-/dev/block/bootdevice/by-name/system                        u:object_r:system_block_device:s0
+/dev/block/bootdevice/by-name/pds                           u:object_r:pds_block_device:s0
 /dev/block/bootdevice/by-name/recovery                      u:object_r:recovery_block_device:s0
 /dev/block/bootdevice/by-name/userdata                      u:object_r:userdata_block_device:s0
-/dev/block/bootdevice/by-name/metadata                      u:object_r:metadata_block_device:s0
-/dev/block/bootdevice/by-name/cache                         u:object_r:cache_block_device:s0
 /dev/block/bootdevice/by-name/utags                         u:object_r:utags_block_device:s0
 /dev/block/bootdevice/by-name/utagsBackup                   u:object_r:utags_block_device:s0
 
