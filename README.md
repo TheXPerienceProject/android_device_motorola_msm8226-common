@@ -1,4 +1,4 @@
-Common configuration for MSM8x26
-===============================
+Common device configuration for the Moto G
+==========================================
 
-Copyright 2015-2016 The XPerience Project
+Copyright 2015 - The CyanogenMod Project

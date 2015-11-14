@@ -4,9 +4,8 @@ audio.offload.24bit.enable=false
 audio.offload.buffer.size.kb=32
 audio.offload.gapless.enabled=false
 audio.offload.multiple.enabled=false
+audio.offload.video=false
 
-#av.offload.enable=false
-audio.offload.video=true
 av.streaming.offload.enable=false
 
 mm.enable.smoothstreaming=true
@@ -89,9 +88,6 @@ ro.use_data_netmgrd=true
 
 # Scheduler
 sys.io.scheduler=bfq
-
-# Storage
-persist.sys.isUsbOtgEnabled=true
 
 # USB
 ro.usb.mtp=0x2e82
