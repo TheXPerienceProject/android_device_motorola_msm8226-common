@@ -80,7 +80,6 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libboringssl-compat \
     libxml2
 
 # Display
@@ -131,9 +130,7 @@ PRODUCT_COPY_FILES += \
 
 # Motorola
 PRODUCT_PACKAGES += \
-    libmoto_camera \
-    libmoto_log \
-    libmoto_ril
+    libmoto_log
 
 # OMX
 PRODUCT_PACKAGES += \
