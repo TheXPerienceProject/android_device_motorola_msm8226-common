@@ -171,6 +171,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
+#Loadable boot Jars
+PRODUCT_BOOT_JARS += qcom.fmradio
+
 # Wifi
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
