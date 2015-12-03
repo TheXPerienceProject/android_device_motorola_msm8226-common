@@ -127,10 +127,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
 
-# Motorola
-PRODUCT_PACKAGES += \
-    libmoto_log
-
 # OMX
 PRODUCT_PACKAGES += \
     libdashplayer \
