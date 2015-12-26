@@ -84,7 +84,6 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8226 \
     libxml2
 
 # Display
