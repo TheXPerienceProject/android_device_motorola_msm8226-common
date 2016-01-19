@@ -169,6 +169,7 @@ static char *camera_fixup_setparams(int id, const char *settings)
     params.dump();
 #endif
 
+<<<<<<< HEAD
     if (get_product_device() == FALCON || get_product_device() == PEREGRINE) {
         if (id == BACK_CAMERA) {
             /*
@@ -184,6 +185,17 @@ static char *camera_fixup_setparams(int id, const char *settings)
             }
         }
     } else if (get_product_device() == TITAN || get_product_device() == THEA) {
+=======
+    /*
+     * The video-hfr parameter gets removed from the parameters list by the
+     * vendor call, unless the Motorola camera app is used. Save the value
+     * so that we can later return it.
+     */
+    const char *hfr = params.get(CameraParameters::KEY_QC_VIDEO_HIGH_FRAME_RATE);
+    snprintf(videoHfr, sizeof(videoHfr), "%s", hfr ? hfr : "off");
+
+    if (get_product_device() == TITAN || get_product_device() == THEA) {
+>>>>>>> c5b4e1e... msm8226-common: camera: Remove preview fps range hack
         const char *sceneMode = params.get(CameraParameters::KEY_SCENE_MODE);
         if (sceneMode != NULL) {
             if (!strcmp(sceneMode, CameraParameters::SCENE_MODE_HDR)) {
