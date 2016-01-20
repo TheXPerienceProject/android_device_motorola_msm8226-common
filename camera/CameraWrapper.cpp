@@ -148,6 +148,36 @@ static char *camera_fixup_getparams(int id, const char *settings)
         params.set(CameraParameters::KEY_QC_SUPPORTED_TOUCH_AF_AEC, "touch-on,touch-off");
     }
 
+<<<<<<< HEAD
+=======
+    params.set(CameraParameters::KEY_QC_SUPPORTED_FACE_DETECTION, "on,off");
+
+    if (get_product_device() == FALCON || get_product_device() == PEREGRINE) {
+        if (id == BACK_CAMERA) {
+            params.set(CameraParameters::KEY_QC_SUPPORTED_HFR_SIZES, "1296x728");
+            params.set(CameraParameters::KEY_QC_SUPPORTED_VIDEO_HIGH_FRAME_RATE_MODES, "60,off");
+        }
+    } else {
+        params.set(CameraParameters::KEY_QC_SUPPORTED_HFR_SIZES, "1296x728,1296x728,720x480");
+        params.set(CameraParameters::KEY_QC_SUPPORTED_VIDEO_HIGH_FRAME_RATE_MODES, "60,90,120,off");
+    }
+
+    if (!(get_product_device() == FALCON || get_product_device() == PEREGRINE) ||
+            id == BACK_CAMERA) {
+        /* The FFC of falcon and peregrine doesn't support scene modes */
+        params.set(CameraParameters::KEY_SUPPORTED_SCENE_MODES,
+                "auto,action,portrait,landscape,night,night-portrait,theatre"
+                "candlelight,beach,snow,sunset,steadyphoto,fireworks,sports,party,"
+                "auto_hdr,hdr,asd,backlight,flowers,AR");
+    }
+
+    /* HFR video recording workaround */
+    const char *recordingHint = params.get(CameraParameters::KEY_RECORDING_HINT);
+    if (recordingHint && !strcmp(recordingHint, "true")) {
+        params.set(CameraParameters::KEY_QC_VIDEO_HIGH_FRAME_RATE, videoHfr);
+    }
+
+>>>>>>> 66d1dce... Revert "msm8226-common: camera: Add ISO support (falcon/peregrine)"
 #if !LOG_NDEBUG
     ALOGV("%s: fixed parameters:", __FUNCTION__);
     params.dump();
