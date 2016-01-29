@@ -58,6 +58,8 @@ static int camera_device_open(const hw_module_t *module, const char *name,
 static int camera_get_number_of_cameras(void);
 static int camera_get_camera_info(int camera_id, struct camera_info *info);
 
+static char videoHfr[4] = "off";
+
 static struct hw_module_methods_t camera_module_methods = {
     .open = camera_device_open
 };
@@ -148,8 +150,6 @@ static char *camera_fixup_getparams(int id, const char *settings)
         params.set(CameraParameters::KEY_QC_SUPPORTED_TOUCH_AF_AEC, "touch-on,touch-off");
     }
 
-<<<<<<< HEAD
-=======
     params.set(CameraParameters::KEY_QC_SUPPORTED_FACE_DETECTION, "on,off");
 
     if (get_product_device() == FALCON || get_product_device() == PEREGRINE) {
@@ -177,7 +177,6 @@ static char *camera_fixup_getparams(int id, const char *settings)
         params.set(CameraParameters::KEY_QC_VIDEO_HIGH_FRAME_RATE, videoHfr);
     }
 
->>>>>>> 66d1dce... Revert "msm8226-common: camera: Add ISO support (falcon/peregrine)"
 #if !LOG_NDEBUG
     ALOGV("%s: fixed parameters:", __FUNCTION__);
     params.dump();
@@ -199,23 +198,6 @@ static char *camera_fixup_setparams(int id, const char *settings)
     params.dump();
 #endif
 
-<<<<<<< HEAD
-    if (get_product_device() == FALCON || get_product_device() == PEREGRINE) {
-        if (id == BACK_CAMERA) {
-            /*
-             * In some cases the vendor HAL tries to restore an invalid fps range
-             * (10000,15000) causing a crash.
-             */
-            const char *fps = params.get(CameraParameters::KEY_PREVIEW_FPS_RANGE);
-            const char *fpsValues = params.get(CameraParameters::KEY_SUPPORTED_PREVIEW_FPS_RANGE);
-            if (fps != NULL && fpsValues != NULL) {
-                if (!strstr(fpsValues, fps)) {
-                    params.set(CameraParameters::KEY_PREVIEW_FPS_RANGE, "15000,30000");
-                }
-            }
-        }
-    } else if (get_product_device() == TITAN || get_product_device() == THEA) {
-=======
     /*
      * The video-hfr parameter gets removed from the parameters list by the
      * vendor call, unless the Motorola camera app is used. Save the value
@@ -225,7 +207,6 @@ static char *camera_fixup_setparams(int id, const char *settings)
     snprintf(videoHfr, sizeof(videoHfr), "%s", hfr ? hfr : "off");
 
     if (get_product_device() == TITAN || get_product_device() == THEA) {
->>>>>>> c5b4e1e... msm8226-common: camera: Remove preview fps range hack
         const char *sceneMode = params.get(CameraParameters::KEY_SCENE_MODE);
         if (sceneMode != NULL) {
             if (!strcmp(sceneMode, CameraParameters::SCENE_MODE_HDR)) {
@@ -697,3 +678,4 @@ static int camera_get_camera_info(int camera_id, struct camera_info *info)
         return 0;
     return gVendorModule->get_camera_info(camera_id, info);
 }
+
