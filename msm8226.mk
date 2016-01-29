@@ -175,6 +175,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8226.conf:system/etc/thermal-engine-8226.conf
 
+# USB
+PRODUCT_PACKAGES += \
+    com.android.future.usb.accessory
+
 #Loadable boot Jars
 PRODUCT_BOOT_JARS += qcom.fmradio
 
