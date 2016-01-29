@@ -144,10 +144,6 @@ static char *camera_fixup_getparams(int id, const char *settings)
     params.dump();
 #endif
 
-    if (id == BACK_CAMERA) {
-        params.set(CameraParameters::KEY_QC_SUPPORTED_TOUCH_AF_AEC, "touch-on,touch-off");
-    }
-
 #if !LOG_NDEBUG
     ALOGV("%s: fixed parameters:", __FUNCTION__);
     params.dump();
@@ -188,11 +184,6 @@ static char *camera_fixup_setparams(int id, const char *settings)
         }
     } else if (get_product_device() == TITAN || get_product_device() == THEA) {
         const char *sceneMode = params.get(CameraParameters::KEY_SCENE_MODE);
-        if (sceneMode != NULL) {
-            if (!strcmp(sceneMode, CameraParameters::SCENE_MODE_HDR)) {
-                params.remove(CameraParameters::KEY_QC_ZSL);
-            }
-        }
     }
 
 #if !LOG_NDEBUG
