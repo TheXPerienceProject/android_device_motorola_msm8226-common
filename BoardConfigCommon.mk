@@ -109,7 +109,7 @@ TARGET_RIL_VARIANT := caf
 
 # Recovery
 COMMON_GLOBAL_CFLAGS 		+= -DNO_SECURE_DISCARD
-TARGET_RECOVERY_FSTAB 		:= $(VENDOR_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB 		:= $(VENDOR_PATH)/rootdir/etc/twrp.fstab
 TARGET_RECOVERY_PIXEL_FORMAT 	:= "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 	:= true
 TARGET_USERIMAGES_USE_F2FS 	:= true
@@ -139,3 +139,5 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 #TW_BRIGHTNESS_PATH := /sys/class/backlight/lcd-backlight/brightness
 #TW_MAX_BRIGHTNESS := 126
 TW_IGNORE_MAJOR_AXIS_0 := true
+
+BOARD_CUSTOM_BOOTIMG_MK := device/motorola/msm8226-common/custombootimg.mk
