@@ -188,7 +188,6 @@ PRODUCT_BOOT_JARS += qcom.fmradio
 
 # Wifi
 PRODUCT_PACKAGES += \
-    dhcpcd.conf \
     hostapd_default.conf \
     hostapd \
     wpa_supplicant \
