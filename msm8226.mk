@@ -96,6 +96,10 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8226 \
     memtrack.msm8226
 
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
