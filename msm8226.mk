@@ -217,4 +217,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcurl \
     libqsap_sdk \
-    libQWiFiSoftApCfg
+    libQWiFiSoftApCfg \
+    wificond
