@@ -8,7 +8,7 @@
     "target_path": "vendor/motorola"
  },
   {
-    "repository": "XPerience-AOSP-Lollipop/android_kernel_motorola_msm8226",
+    "repository": "android_kernel_motorola_msm8226",
     "target_path": "kernel/motorola/msm8226"
  }
 ]
