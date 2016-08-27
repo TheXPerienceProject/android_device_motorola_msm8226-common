@@ -46,6 +46,7 @@ TARGET_NO_BOOTLOADER 	     := true
 BOARD_KERNEL_CMDLINE	  := earlyprintk androidboot.bootdevice=msm_sdcc.1 androidboot.hardware=qcom vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.selinux=permissive
 BOARD_KERNEL_BASE 	  := 0x00000000
 BOARD_KERNEL_PAGESIZE 	  := 2048
+BOARD_CUSTOM_BOOTIMG_MK   := $(VENDOR_PATH)/mkbootimg.mk
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_DTBTOOL_ARGS  	  := --force-v2
 BOARD_MKBOOTIMG_ARGS 	  := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
@@ -107,6 +108,7 @@ TARGET_RIL_VARIANT := caf
 
 # Recovery
 BOARD_NO_SECURE_DISCARD := true
+TARGET_NOT_USE_GZIP_RECOVERY_RAMDISK := true
 TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
