@@ -156,6 +156,10 @@ PRODUCT_PACKAGES += \
     init.qcom.ril.sh \
     dump_pds.sh
 
+#TWRP
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+
 PRODUCT_PACKAGES += \
     init.mmi.boot.sh \
     init.mmi.touch.sh \
