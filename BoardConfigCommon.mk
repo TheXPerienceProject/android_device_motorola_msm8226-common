@@ -1,4 +1,4 @@
-# Copyright (C) 2014 The XPerience Project
+#
 # Copyright (C) 2014 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,48 +23,44 @@ BOARD_VENDOR := motorola-qcom
 TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
 
 # Platform
-TARGET_BOARD_PLATFORM 		:= msm8226
-TARGET_BOARD_PLATFORM_GPU	:= qcom-adreno305
+TARGET_BOARD_PLATFORM := msm8226
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
 
 # Architecture
-TARGET_ARCH 			   := arm
-TARGET_ARCH_VARIANT 		   := armv7-a-neon
-TARGET_CPU_ABI 			   := armeabi-v7a
-TARGET_CPU_ABI2 		   := armeabi
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_MEMCPY_BASE_OPT_DISABLE := true
-TARGET_CPU_VARIANT 		   := krait
-
-#Custom flags
-TARGET_GLOBAL_CFLAGS 		+= -mfpu=neon-vfpv4 -mfloat-abi=hard
-TARGET_GLOBAL_CPPFLAGS 		+= -mfpu=neon-vfpv4 -mfloat-abi=hard
+TARGET_CPU_VARIANT := krait
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8226
-TARGET_NO_BOOTLOADER 	     := true
+TARGET_NO_BOOTLOADER := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE	  := earlyprintk androidboot.bootdevice=msm_sdcc.1 androidboot.hardware=qcom vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.selinux=permissive
-BOARD_KERNEL_BASE 	  := 0x00000000
-BOARD_KERNEL_PAGESIZE 	  := 2048
-BOARD_CUSTOM_BOOTIMG_MK   := $(VENDOR_PATH)/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(VENDOR_PATH)/mkbootimg.mk
+BOARD_DTBTOOL_ARGS := --force-v2
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_CMDLINE := androidboot.bootdevice=msm_sdcc.1 androidboot.hardware=qcom vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags
+BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
-BOARD_DTBTOOL_ARGS  	  := --force-v2
-BOARD_MKBOOTIMG_ARGS 	  := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-TARGET_KERNEL_SOURCE 	  := kernel/motorola/msm8226
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+TARGET_KERNEL_SOURCE := kernel/motorola/msm8226
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-smd"
 
 # Audio
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
-AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE 	   := true
-BOARD_USES_ALSA_AUDIO 			   := true
+AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
+BOARD_USES_ALSA_AUDIO := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(VENDOR_PATH)/bluetooth
-BOARD_HAVE_BLUETOOTH 			    := true
-BOARD_HAVE_BLUETOOTH_QCOM 		    := true
-BLUETOOTH_HCI_USE_MCT 			    := true
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+BLUETOOTH_HCI_USE_MCT := true
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
@@ -79,10 +75,10 @@ BOARD_NO_CHARGER_LED := true
 BOARD_HARDWARE_CLASS := $(VENDOR_PATH)/cmhw/
 
 # Display
-NUM_FRAMEBUFFER_SURFACE_BUFFERS   := 3
-TARGET_USES_C2D_COMPOSITION 	  := true
-TARGET_USES_ION 		  := true
-USE_OPENGL_RENDERER 		  := true
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+TARGET_USES_C2D_COMPOSITION := true
+TARGET_USES_ION := true
+USE_OPENGL_RENDERER := true
 
 # FM Radio
 TARGET_QCOM_NO_FM_FIRMWARE := true
@@ -133,21 +129,13 @@ endif
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 # Wifi
-BOARD_HAS_QCOM_WLAN 		 := true
-BOARD_HAS_QCOM_WLAN_SDK 	 := true
-BOARD_HOSTAPD_DRIVER 		 := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB 	 := lib_driver_cmd_qcwcn
-BOARD_WLAN_DEVICE 		 := qcwcn
-BOARD_WPA_SUPPLICANT_DRIVER 	 := NL80211
+BOARD_HAS_QCOM_WLAN := true
+BOARD_HAS_QCOM_WLAN_SDK := true
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_qcwcn
+BOARD_WLAN_DEVICE := qcwcn
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
-WIFI_DRIVER_FW_PATH_AP 		 := "ap"
-WIFI_DRIVER_FW_PATH_STA  	 := "sta"
-WPA_SUPPLICANT_VERSION 		 := VER_0_8_X
-
-# TWRP
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-#TW_BRIGHTNESS_PATH := /sys/class/backlight/lcd-backlight/brightness
-#TW_MAX_BRIGHTNESS := 126
-TW_IGNORE_MAJOR_AXIS_0 := true
-
-#BOARD_CUSTOM_BOOTIMG_MK := device/motorola/msm8226-common/custombootimg.mk
+WIFI_DRIVER_FW_PATH_AP := "ap"
+WIFI_DRIVER_FW_PATH_STA := "sta"
+WPA_SUPPLICANT_VERSION := VER_0_8_X

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,7 +28,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
-    frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
@@ -95,10 +94,6 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8226 \
     memtrack.msm8226
 
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
-
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
@@ -109,6 +104,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
+
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -134,10 +133,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
-
-# MIDI feature
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -186,8 +181,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
-#Loadable boot Jars
-PRODUCT_BOOT_JARS += qcom.fmradio
+# WCNSS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
+
+PRODUCT_PACKAGES += \
+    wcnss_service \
+    WCNSS_qcom_wlan_factory_nv.bin
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -201,14 +202,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += \
-    WCNSS_qcom_wlan_factory_nv.bin
-
-PRODUCT_PACKAGES += \
     libcurl \
     libqsap_sdk \
-    libQWiFiSoftApCfg \
-    wcnss_service
-
-PRODUCT_COPY_FILES += \
-    kernel/motorola/msm8226/drivers/staging/prima/firmware_bin/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
-    kernel/motorola/msm8226/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+    libQWiFiSoftApCfg

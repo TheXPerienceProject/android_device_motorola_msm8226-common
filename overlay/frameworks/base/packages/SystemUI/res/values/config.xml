@@ -17,8 +17,6 @@
 */
 -->
 
-<!-- These resources are around just to allow their values to be customized
-     for different hardware and product builds.  Do not translate. -->
 <resources>
 
     <!-- Doze: pulse parameter - how long does it take to fade in? -->

@@ -89,6 +89,3 @@ persist.sys.ssr.enable_debug=0
 persist.sys.qc.sub.rdump.on=1
 ro.disableWifiApFirmwareReload=true
 
-#Enable multiwindow
-persist.sys.debug.multi_window=true
-
