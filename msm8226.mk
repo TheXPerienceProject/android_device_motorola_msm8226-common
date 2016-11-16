@@ -55,8 +55,6 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
-$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
-
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -102,6 +100,15 @@ PRODUCT_PACKAGES += \
     libshims_sensorlistener \
     libshim_canvas \
     Camera2
+
+# Dalvik properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heapgrowthlimit=192m \
+    dalvik.vm.heapsize=256m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapmaxfree=8m
 
 # DRM
 PRODUCT_PACKAGES += \
