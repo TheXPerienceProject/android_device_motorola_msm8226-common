@@ -73,6 +73,9 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_NO_CHARGER_LED := true
 
+#Compressed aapt we have less system partition
+TARGET_WANTS_AAPT_COMPRESS := true
+
 # CMHW
 BOARD_HARDWARE_CLASS := $(VENDOR_PATH)/cmhw/
 
