@@ -29,6 +29,9 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
+#Disable XPerience Clang optimization.
+XPERIENCE_OPTIMIZATION := false
+
 # Architecture
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
