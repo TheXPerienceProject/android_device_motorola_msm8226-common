@@ -3,10 +3,21 @@
     "repository": "android_kernel_motorola_msm8226",
     "target_path": "kernel/motorola/msm8226"
   },
-  {
-    "remote":  "cm",
-    "repository": "android_packages_resources_devicesettings",
+    "remote": "cm",
+    "repository": "LineageOS/android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings",
-    "branch": "cm-14.1"
+    "branch":      "cm-14.1"
+  },
+  {
+    "remote": "Unicorn",
+    "repository": "proprietary_vendor_motorola",
+    "target_path": "vendor/motorola",
+    "branch":      "xpe-11.1"
+  },
+    {
+    "remote": "Muppet",
+    "repository": "proprietary_vendor_qcom_binaries",
+    "target_path": "vendor/qcom/binaries",
+    "branch":      "cm-14.1"
   }
 ]
