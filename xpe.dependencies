@@ -3,6 +3,7 @@
     "repository": "android_kernel_motorola_msm8226",
     "target_path": "kernel/motorola/msm8226"
   },
+  {
     "remote": "cm",
     "repository": "LineageOS/android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings",
