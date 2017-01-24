@@ -20,6 +20,9 @@ vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 
+#Display
+vendor/lib/libuiblur.so
+
 # Bluetooth
 bin/btnvtool
 bin/hci_qcomm_init
