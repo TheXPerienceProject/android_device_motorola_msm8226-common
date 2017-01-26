@@ -1,5 +1,6 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2017 The XPerience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -47,7 +48,7 @@ TARGET_NO_BOOTLOADER := true
 # Kernel
 BOARD_DTBTOOL_ARGS := --force-v2
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE	  := earlyprintk androidboot.bootdevice=msm_sdcc.1 androidboot.hardware=qcom vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE	  := earlyprintk androidboot.bootdevice=msm_sdcc.1 androidboot.hardware=qcom vmalloc=400M utags.blkdev=/dev/block/platform/msm_sdcc.1/by-name/utags
 BOARD_KERNEL_BASE 	  := 0x00000000
 BOARD_KERNEL_PAGESIZE 	  := 2048
 BOARD_KERNEL_SEPARATED_DT := true
@@ -70,7 +71,7 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
 
 #Build in adblock
-XPERIENCE_IN_ADBLOCK := true
+XPERIENCE_IN_ADBLOCK := false
 
 # Camera
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
