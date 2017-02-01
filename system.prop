@@ -96,3 +96,6 @@ persist.sys.ssr.enable_debug=0
 # Wifi
 persist.sys.qc.sub.rdump.on=1
 ro.disableWifiApFirmwareReload=true
+
+# Google Assistant
+ro.opa.eligible_device=true
