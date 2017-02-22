@@ -122,6 +122,11 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
+# Recovery: TWRP support
+ifeq ($(WITH_TWRP),true)
+-include $(PLATFORM_PATH)/twrp.mk
+endif
+
 # Release tools
 TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 
