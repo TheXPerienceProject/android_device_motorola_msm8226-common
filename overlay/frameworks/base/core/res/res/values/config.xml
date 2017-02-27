@@ -426,7 +426,7 @@
     <bool name="config_eap_sim_based_auth_supported">false</bool>
 
     <!-- Enable blur support -->
-    <bool name="config_uiBlurEnabled">true</bool>
+    <bool name="config_uiBlurEnabled">false</bool>
 
     <!-- Whether to enable HumanInteractionController by default -->
     <bool name="config_HICEnabledDefault">false</bool>
