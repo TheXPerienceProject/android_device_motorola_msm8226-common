@@ -55,6 +55,9 @@ TARGET_SCREEN_WIDTH := 720
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
+PRODUCT_PROPERTY_OVERRIDES += \
+       dalvik.vm.heapminfree=2m
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
