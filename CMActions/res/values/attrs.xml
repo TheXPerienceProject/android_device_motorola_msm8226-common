@@ -7,15 +7,16 @@
 
           http://www.apache.org/licenses/LICENSE-2.0
 
->>>>>>> b95e143... CMActions: Import SwitchBar code from Settings
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
 <resources>
-    <!-- Switch On/Off  -->
-    <string name="switch_on_text">@string/switch_bar_on</string>
-    <string name="switch_off_text">@string/switch_bar_off</string>
+    <attr name="switchBarTheme" format="reference" />
+    <attr name="switchBarMarginStart" format="dimension" />
+    <attr name="switchBarMarginEnd" format="dimension" />
+    <attr name="switchBarBackgroundColor" format="color" />
 </resources>
