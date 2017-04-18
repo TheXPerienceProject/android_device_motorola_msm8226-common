@@ -206,6 +206,9 @@ bin/thermal-engine:vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
+# STLport
+vendor/lib/libstlport.so
+
 # Time services
 -app/TimeService/TimeService.apk
 bin/time_daemon:vendor/bin/time_daemon
