@@ -81,7 +81,6 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/mmi_lpm/lpm_mode
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_NO_CHARGER_LED := true
-BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 #Compressed aapt we have less system partition
 TARGET_WANTS_AAPT_COMPRESS := true
