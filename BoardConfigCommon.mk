@@ -92,7 +92,6 @@ BOARD_HARDWARE_CLASS := $(VENDOR_PATH)/cmhw/
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
-USE_OPENGL_RENDERER := true
 
 # FM Radio
 BOARD_HAVE_QCOM_FM := true
@@ -134,6 +133,10 @@ endif
 
 # Release tools
 TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
+
+# Render
+OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
+USE_OPENGL_RENDERER := true
 
 # Basic dexpreopt
 ifeq ($(HOST_OS),linux)
