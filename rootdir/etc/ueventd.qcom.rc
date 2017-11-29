@@ -256,7 +256,7 @@
 /dev/stm401_ms            0660  compass    compass
 
 # Validity Sensor
-/dev/vfsspi               0660  fingerp    fingerp
+/dev/vfsspi               0660  oem_9015   oem_9015
 
 # DTV
 /dev/isdbt                0660  system     system
