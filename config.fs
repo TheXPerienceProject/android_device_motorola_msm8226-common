@@ -8,61 +8,61 @@ value:2951
 value:2952
 
 [AID_MOT_ACCY]
-value:9000
+value:5000
 
 [AID_MOT_PWRIC]
-value:9001
+value:5001
 
 [AID_MOT_USB]
-value:9002
+value:5002
 
 [AID_MOT_DRM]
-value:9003
+value:5003
 
 [AID_MOT_TCMD]
-value:9004
+value:5004
 
 [AID_MOT_SEC_RTC]
-value:9005
+value:5005
 
 [AID_MOT_TOMBSTONE]
-value:9006
+value:5006
 
 [AID_MOT_TPAPI]
-value:9007
+value:5007
 
 [AID_MOT_SECCLKD]
-value:9008
+value:5008
 
 [AID_MOT_WHISPER]
-value:9009
+value:5009
 
 [AID_MOT_CAIF]
-value:9010
+value:5010
 
 [AID_MOT_DLNA]
-value:9011
+value:5011
 
 [AID_MOT_ATVC]
-value:9012
+value:5012
 
 [AID_SPRINT_EXTENSION]
-value:9013
+value:5013
 
 [AID_MOT_DBVC]
-value:9014
+value:5014
 
 [AID_FINGERP]
-value:9015
+value:5015
 
 [AID_MOT_ESDFS]
-value:9016
+value:5016
 
 [AID_POWER]
-value:9017
+value:5017
 
 [AID_ITSON]
-value:9018
+value:5018
 
 [AID_MOT_DTV]
-value:9019
+value:5019
