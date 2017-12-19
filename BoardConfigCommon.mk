@@ -93,6 +93,11 @@ TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/config.fs
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
+#Go mode
+XPERIENCE_GO_MODE := true
+#Define the mode used (Falcon have 1gb ram)
+XPERIENCE_GO_MODE_1GB := true
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
