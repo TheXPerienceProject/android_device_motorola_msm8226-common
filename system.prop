@@ -104,3 +104,6 @@ camera2.portability.force_api=1
 media.stagefright.legacyencoder=true
 media.stagefright.less-secure=true
 camera.disable_treble=true
+
+#Low ram flag
+ro.config.low_ram=true
