@@ -100,6 +100,7 @@ PRODUCT_PACKAGES += \
     libshims_camera \
     libshim_qcopt \
     libshims_sensorlistener \
+    libshim_canvas \
     Camera2
 
 # DRM
