@@ -222,9 +222,9 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/thermal/thermal-engine-8226.conf:system/etc/thermal-engine-8226.conf \
-    $(LOCAL_PATH)/thermal/thermal-engine-thea.conf:system/etc/thermal-engine-thea.conf \
-    $(LOCAL_PATH)/thermal/thermal-engine-titan.conf:system/etc/thermal-engine-titan.conf
+    $(LOCAL_PATH)/thermal/thermal-engine-8226.conf:system/vendor/etc/thermal-engine-8226.conf \
+    $(LOCAL_PATH)/thermal/thermal-engine-thea.conf:system/vendor/etc/thermal-engine-thea.conf \
+    $(LOCAL_PATH)/thermal/thermal-engine-titan.conf:system/vendor/etc/thermal-engine-titan.conf
 
 PRODUCT_PACKAGES += \
     libshims_thermal
