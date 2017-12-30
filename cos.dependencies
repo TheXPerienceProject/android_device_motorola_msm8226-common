@@ -1,0 +1,20 @@
+[
+  {
+    "remote": "github",
+    "repository": "XPerience-AOSP-Lollipop/android_kernel_motorola_msm8226",
+    "target_path": "kernel/motorola/msm8226",
+    "branch": "xpe-12.1"
+  },
+  {
+    "remote": "github",
+    "repository": "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch": "staging/lineage-15.1"
+  },
+  {
+    "remote": "github",
+    "repository": "RainbowUnicornXPe/proprietary_vendor_motorola",
+    "target_path": "vendor/motorola",
+    "branch": "xpe-12.1"
+  }
+]
