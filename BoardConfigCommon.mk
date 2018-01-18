@@ -104,6 +104,9 @@ TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x02000000U
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
+# Exclude serif fonts for saving system.img size.
+EXCLUDE_SERIF_FONTS := true
+
 # Filesystem
 TARGET_ALLOW_LEGACY_AIDS := true
 TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/config.fs
