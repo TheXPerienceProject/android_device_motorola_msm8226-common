@@ -17,7 +17,6 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 $(call inherit-product, vendor/motorola/msm8226-common/msm8226-common-vendor.mk)
-$(call inherit-product, vendor/xperience/config/go_mode.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -151,6 +150,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     keystore.msm8226
+
+#Launcher3Go
+PRODUCT_PACKAGES += \
+    Launcher3Go
 
 # Lights
 PRODUCT_PACKAGES += \
