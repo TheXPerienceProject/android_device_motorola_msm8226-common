@@ -192,7 +192,8 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libqc-opt.so|libshim_qcopt.so \
     /system/vendor/bin/mm-qcamera-daemon|libshim_canvas.so \
     /system/vendor/bin/mm-qcamera-daemon|libshim_skia.so \
-    /system/lib/libskia.so|libshim_skia.so
+    /system/lib/libskia.so|libshim_skia.so \
+    /system/lib/libmdmcutback.so|libqsap_shim.so
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
