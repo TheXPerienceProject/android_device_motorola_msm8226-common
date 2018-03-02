@@ -1,5 +1,5 @@
 # Bluetooth executables and scripts
-type bluetooth_loader, domain;
+#type bluetooth_loader, domain;
 type bluetooth_loader_exec, exec_type, file_type;
 
 # Started by init
@@ -13,4 +13,3 @@ set_prop(bluetooth_loader, bluetooth_prop)
 
 allow bluetooth_loader vendor_file:file execute_no_trans;
 allow bluetooth_loader toolbox_exec:file rx_file_perms;
-
