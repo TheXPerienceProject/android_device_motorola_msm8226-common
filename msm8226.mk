@@ -264,3 +264,6 @@ PRODUCT_PACKAGES += \
     libqsap_sdk \
     libQWiFiSoftApCfg \
     wificond
+
+# Common Android Go configurations
+$(call inherit-product, build/target/product/go_defaults.mk)
