@@ -153,7 +153,7 @@ PRODUCT_PACKAGES += \
 
 #Launcher3Go
 PRODUCT_PACKAGES += \
-    Launcher3Go
+    Launcher3PixelGo
 
 # Lights
 PRODUCT_PACKAGES += \
