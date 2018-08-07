@@ -107,4 +107,4 @@ media.stagefright.less-secure=true
 camera.disable_treble=true
 
 #Low ram flag
-ro.config.low_ram=true
+#ro.config.low_ram=true
