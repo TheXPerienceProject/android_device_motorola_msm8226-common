@@ -71,6 +71,9 @@ on fs
     wait /cache/pds-dump.img
     mount ext3 loop@/cache/pds-dump.img /pds
     restorecon /pds
+
+    # activate zram
+    write /proc/sys/vm/page-cluster 0
     
     # Start HW service manager early
     start hwservicemanager
@@ -84,7 +87,9 @@ on late-fs
 
     mount_all fstab.qcom --late
 
-    write /proc/sys/vm/page-cluster 0
+on post-fs
+    # Allow writing to the kernel trace log.
+    chmod 0222 /sys/kernel/debug/tracing/trace_marker
 
 on post-fs-data
     mkdir /data/tombstones 0771 system system
