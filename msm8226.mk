@@ -98,6 +98,9 @@ PRODUCT_PACKAGES += \
     libshim_qcopt \
     libshims_sensorlistener \
     libshim_canvas
+#Our camera daemon wants libskia
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/libskia.so:system/lib/libskia.so
 
 # Dalvik properties
 PRODUCT_PROPERTY_OVERRIDES += \
