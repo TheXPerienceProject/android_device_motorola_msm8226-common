@@ -10,7 +10,7 @@ LOCAL_MODULE       := p2p_supplicant_overlay.conf
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := $(LOCAL_MODULE)
-LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/wifi
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/wifi
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -18,13 +18,13 @@ LOCAL_MODULE       := wpa_supplicant_overlay.conf
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := $(LOCAL_MODULE)
-LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/wifi
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/wifi
 include $(BUILD_PREBUILT)
 
 # Create symbolic links
-$(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/prima; \
+$(shell mkdir -p $(TARGET_OUT_VENDOR)/firmware/wlan/prima; \
 	ln -sf /data/misc/wifi/WCNSS_qcom_cfg.ini \
-	$(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
+	$(TARGET_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := WCNSS_qcom_wlan_factory_nv.bin
@@ -32,7 +32,7 @@ LOCAL_MODULE_CLASS := FAKE
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SYSTEM)/base_rules.mk
 $(LOCAL_BUILT_MODULE): TARGET := /persist/$(LOCAL_MODULE)
-$(LOCAL_BUILT_MODULE): SYMLINK := $(TARGET_OUT)/etc/firmware/wlan/prima/$(LOCAL_MODULE)
+$(LOCAL_BUILT_MODULE): SYMLINK := $(TARGET_OUT_VENDOR)/firmware/wlan/prima/$(LOCAL_MODULE)
 $(LOCAL_BUILT_MODULE):
 	$(hide) echo "Symlink: $(SYMLINK) -> $(TARGET)"
 	$(hide) mkdir -p $(dir $@)
