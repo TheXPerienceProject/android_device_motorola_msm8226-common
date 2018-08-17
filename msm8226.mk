@@ -94,6 +94,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl-legacy \
     camera.msm8226 \
     libxml2 \
+    libskia \
+    libshim_skia \
     libshims_camera \
     libshim_qcopt \
     libshims_sensorlistener \
