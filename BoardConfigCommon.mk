@@ -158,7 +158,7 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/bin/mm-qcamera-daemon|libshim_canvas.so
 
 # Wifi
-BOARD_USES_AOSP_WLAN_HAL := trues
+BOARD_HAS_QCOM_WLAN := true
 TARGET_PROVIDES_WCNSS_SERVICE_SOURCE := true
 BOARD_HAS_QCOM_WLAN_SDK := true
 BOARD_HOSTAPD_DRIVER := NL80211
