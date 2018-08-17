@@ -259,6 +259,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    libwpa_client \
     hostapd \
     wpa_supplicant \
     wpa_supplicant.conf
@@ -271,4 +272,5 @@ PRODUCT_PACKAGES += \
     libcurl \
     libqsap_sdk \
     libQWiFiSoftApCfg \
+    wifilogd \
     wificond

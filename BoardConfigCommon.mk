@@ -81,6 +81,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_NO_CHARGER_LED := true
 
 # Display
+BOARD_USE_LEGACY_UI := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
@@ -157,7 +158,7 @@ TARGET_LD_SHIM_LIBS := \
     /system/vendor/bin/mm-qcamera-daemon|libshim_canvas.so
 
 # Wifi
-BOARD_HAS_QCOM_WLAN := true
+BOARD_USES_AOSP_WLAN_HAL := trues
 BOARD_HAS_QCOM_WLAN_SDK := true
 BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_qcwcn
