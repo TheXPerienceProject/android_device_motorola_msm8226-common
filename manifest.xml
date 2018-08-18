@@ -1,15 +1,11 @@
 <!--
     This is a skeleton device manifest. Notes:
-    1. android.hidl.*, android.frameworks.*, android.system.* are not included.
-    2. If a HAL is supported in both hwbinder and passthrough transport,
+    1. If a HAL is supported in both hwbinder and passthrough transport,
        only hwbinder is shown.
-    3. It is likely that HALs in passthrough transport does not have
+    2. It is likely that HALs in passthrough transport does not have
        <interface> declared; users will have to write them by hand.
-    4. A HAL with lower minor version can be overridden by a HAL with
+    3. A HAL with lower minor version can be overridden by a HAL with
        higher minor version if they have the same name and major version.
-    5. sepolicy version is set to 0.0. It is recommended that the entry
-       is removed from the manifest file and written by assemble_vintf
-       at build time.
 -->
 <manifest version="1.0" type="device">
     <hal format="hidl">
@@ -27,20 +23,24 @@
         <version>2.0</version>
         <interface>
             <name>IEffectsFactory</name>
-            <instance>default</instance>
+           <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
         <transport arch="32">passthrough</transport>
         <version>1.0</version>
+        <interface>
+            <name>IBluetoothHci</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.broadcastradio</name>
         <transport arch="32">passthrough</transport>
         <version>1.0</version>
     </hal>
-    <hal format="hidl">
+	<hal format="hidl">
         <name>android.hardware.camera.provider</name>
         <transport arch="32">passthrough</transport>
         <version>2.4</version>
@@ -61,7 +61,7 @@
     <hal format="hidl">
         <name>android.hardware.configstore</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>ISurfaceFlingerConfigs</name>
             <instance>default</instance>
@@ -94,10 +94,6 @@
         <name>android.hardware.graphics.composer</name>
         <transport arch="32">passthrough</transport>
         <version>2.1</version>
-        <interface>
-            <name>IComposer</name>
-            <instance>default</instance>
-        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
@@ -112,10 +108,6 @@
         <name>android.hardware.keymaster</name>
         <transport arch="32">passthrough</transport>
         <version>3.0</version>
-        <interface>
-            <name>IKeymasterDevice</name>
-            <instance>default</instance>
-        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.light</name>
@@ -151,6 +143,7 @@
         <interface>
             <name>IRadio</name>
             <instance>slot1</instance>
+            <instance>slot2</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -160,6 +153,7 @@
         <interface>
             <name>IOemHook</name>
             <instance>slot1</instance>
+            <instance>slot2</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -213,15 +207,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.wifi.hostapd</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IHostapd</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.wifi.supplicant</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -230,7 +215,9 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <sepolicy>
-        <version>0.0</version>
-    </sepolicy>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.fm</name>
+        <transport arch="32">passthrough</transport>
+        <version>1.0</version>
+    </hal>
 </manifest>
