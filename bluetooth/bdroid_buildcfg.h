@@ -18,7 +18,24 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "Moto G"
+#include <cutils/properties.h>
+#include <string.h>
+
+inline const char* BtmGetDefaultName()
+{
+	char device[PROPERTY_VALUE_MAX];
+	property_get("ro.xpe.device", device,"");
+
+	if (strcmp("falcon", device)){
+		return "Moto G";
+	} else if (strcmp("titan", device)){
+		return "Moto G 2014";
+	} else {
+		return "Moto G 4G";
+	}
+}
+
+#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
 #define BLUETOOTH_QTI_SW TRUE
 // Disables read remote device feature
 #define BTA_SKIP_BLE_READ_REMOTE_FEAT FALSE
