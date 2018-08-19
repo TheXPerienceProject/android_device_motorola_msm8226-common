@@ -94,12 +94,14 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl-legacy \
     camera.msm8226 \
     libxml2 \
-    libskia \
     libshim_skia \
     libshims_camera \
     libshim_qcopt \
     libshims_sensorlistener \
     libshim_canvas
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/libskia.so:system/lib/libskia.so
 
 # Dalvik properties
 PRODUCT_PROPERTY_OVERRIDES += \
