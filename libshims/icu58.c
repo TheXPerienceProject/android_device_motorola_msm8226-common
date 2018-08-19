@@ -34,3 +34,15 @@ ucnv_toUChars_58(UConverter *cnv, UChar *dest, int32_t destCapacity, const char 
 {
 	return ucnv_toUChars(cnv, dest, destCapacity, src, srcLength, pErrorCode);
 }
+
+U_STABLE void  U_EXPORT2
+ucnv_close_58(UConverter * converter){
+	return ucnv_close(converter);
+}
+
+U_CAPI UConverter* U_EXPORT2
+ucnv_open_58(const char *name,
+                       UErrorCode * err)
+{
+	return ucnv_open(name, err);
+}
