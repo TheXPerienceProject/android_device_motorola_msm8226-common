@@ -451,10 +451,10 @@ service audiod /system/bin/audiod
     user system
     group system
 
-on property:bluetooth.hciattach=false
-    setprop bluetooth.status off
+on property:vendor.bluetooth.hciattach=false
+    setprop vendor.bluetooth.status off
 
-on property:bluetooth.hciattach=true
+on property:vendor.bluetooth.hciattach=true
     start hciattach
 
 service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
