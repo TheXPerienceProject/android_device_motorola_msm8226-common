@@ -100,7 +100,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl.msm8226
+    android.hardware.bluetooth@1.0-impl \
+    libbt-vendor
 
 # Camera
 PRODUCT_PACKAGES += \
