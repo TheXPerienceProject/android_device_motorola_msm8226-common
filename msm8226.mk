@@ -55,7 +55,7 @@ TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
 # ANT+
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     AntHalService \
     com.dsi.ant.antradio_library \
     libantradio
@@ -86,7 +86,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl.msm8226
+    android.hardware.bluetooth@1.0-impl.msm8226 \
+    libbt-vendor
 
 # Camera
 PRODUCT_PACKAGES += \
