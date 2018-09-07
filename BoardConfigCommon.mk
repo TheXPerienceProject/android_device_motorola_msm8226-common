@@ -20,7 +20,7 @@ VENDOR_PATH := device/motorola/msm8226-common
 
 BOARD_VENDOR := motorola-qcom
 
-TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
+TARGET_SPECIFIC_HEADER_PATH := device/motorola/msm8226-common/include
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8226
@@ -158,6 +158,8 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 USE_OPENGL_RENDERER := true
 SF_START_GRAPHICS_ALLOCATOR_SERVICE := true
 
+TARGET_RIL_VARIANT := caf
+
 # Basic dexpreopt Go mode
 # Basic dexpreopt
 ifeq ($(HOST_OS),linux)
@@ -171,7 +173,7 @@ WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
 
 # SELinux
 -include device/qcom/sepolicy/sepolicy.mk
--include device/qcom/sepolicy/legacy-sepolicy.mk
+#-include device/qcom/sepolicy/legacy-sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 # Shims

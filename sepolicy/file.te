@@ -1,5 +1,5 @@
 # Cutback socket (RILD)
-type cutback_data_file, file_type, data_file_type;
+type cutback_data_file, file_type, core_data_file_type, data_file_type;
 
 # Persist
 type persist_omadm_file, file_type;
