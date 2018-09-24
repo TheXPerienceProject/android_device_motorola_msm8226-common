@@ -40,6 +40,8 @@ inline const char* BtmGetDefaultName()
 // Disables read remote device feature
 #define BTA_SKIP_BLE_READ_REMOTE_FEAT FALSE
 #define MAX_L2CAP_CHANNELS    16
+#define BLE_VND_INCLUDED   TRUE
 // skips conn update at conn completion
 #define BTA_BLE_SKIP_CONN_UPD  FALSE
+#define BTA_DISABLE_DELAY 1000 /* in milliseconds */
 #endif
