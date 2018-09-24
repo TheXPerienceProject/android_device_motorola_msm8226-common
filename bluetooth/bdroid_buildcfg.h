@@ -26,12 +26,12 @@ inline const char* BtmGetDefaultName()
 	char device[PROPERTY_VALUE_MAX];
 	property_get("ro.xpe.device", device,"");
 
-	if (strcmp("falcon", device)){
-		return "Moto G";
+	if (strcmp("peregrine", device)){
+		return "Moto G 4G";
 	} else if (strcmp("titan", device)){
 		return "Moto G 2014";
 	} else {
-		return "Moto G 4G";
+		return "Moto G";
 	}
 }
 
