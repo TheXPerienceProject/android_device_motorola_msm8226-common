@@ -6,7 +6,7 @@
 /system/bin/dump_pds\.sh                                    u:object_r:dump_pds_exec:s0
 
 # MPDecision
-/data/system/default_values                                 u:object_r:mpctl_data_file:s0
+/data/system/default_values                                 u:object_r:mpdecision_data_file:s0
 /dev/socket/mpctl                                           u:object_r:mpctl_socket:s0
 /dev/socket/mpdecision                                      u:object_r:mpctl_socket:s0
 
@@ -47,8 +47,8 @@
 /dev/akm8963_dev                                            u:object_r:sensors_device:s0
 /dev/l3g4200d                                               u:object_r:sensors_device:s0
 /dev/lis3dh                                                 u:object_r:sensors_device:s0
-/data/misc/akmdfs.txt                                       u:object_r:mpctl_data_file:s0
-/data/misc/sensor(/.*)?                                     u:object_r:mpctl_data_file:s0
+/data/misc/akmdfs.txt                                       u:object_r:sensors_data_file:s0
+/data/misc/sensor(/.*)?                                     u:object_r:sensors_data_file:s0
 /sys/devices/virtual/input/input0(/.*)?                     u:object_r:sysfs_sensors:s0
 /sys/devices/virtual/input/input1(/.*)?                     u:object_r:sysfs_sensors:s0
 /sys/devices/virtual/input/input2(/.*)?                     u:object_r:sysfs_sensors:s0

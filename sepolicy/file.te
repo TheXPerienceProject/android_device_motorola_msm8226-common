@@ -9,3 +9,6 @@ type persist_telephony_file, file_type;
 type pds_file, file_type;
 type pds_public_file, file_type;
 type pds_batt_file, file_type;
+
+#Sensors
+type sensors_data_file, file_type, core_data_file_type, data_file_type;

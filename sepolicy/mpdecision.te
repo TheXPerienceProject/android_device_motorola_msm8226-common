@@ -1,5 +1,6 @@
 type mpdecision, domain, mlstrustedsubject;
 type mpdecision_exec, exec_type, file_type;
+type mpdecision_data_file, file_type, core_data_file_type, data_file_type;
 
 init_daemon_domain(mpdecision)
 
