@@ -291,6 +291,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi HAL
 PRODUCT_PACKAGES += \
+    vendor.qti.hardware.wifi.hostapd@1.0 \
     android.hardware.wifi@1.0-service
 
 # Wifi
