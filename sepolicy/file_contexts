@@ -62,8 +62,6 @@
 /sys/devices/f9925000\.i2c/i2c-3/3-0048/temp1_max_hyst      u:object_r:sysfs_thermal:s0
 
 #Bluetooth
-/dev/socket/qmux_bluetooth(/.*)?                            u:object_r:qmuxd_socket:s0
 /sys/devices/bt_qca6174\.[0-9]+/extldo                                        u:object_r:sysfs_bluetooth_writable:s0
 /sys/devices/bt_qca6174\.[0-9]+/rfkill/rfkill0/state                          u:object_r:sysfs_bluetooth_writable:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.bluetooth@1\.0-service-qti  u:object_r:hal_bluetooth_qti_exec:s0
 /(vendor|system/vendor)/bin/hci_qcomm_init                                    u:object_r:bluetooth_loader_exec:s0
