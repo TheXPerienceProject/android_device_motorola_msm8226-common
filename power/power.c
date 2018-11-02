@@ -196,7 +196,7 @@ static struct hw_module_methods_t power_module_methods = {
 };
 
 static int get_feature(__attribute__((unused)) struct power_module *module,
-                       feature_t feature)
+                       feature_tt feature)
 {
     if (feature == POWER_FEATURE_SUPPORTED_PROFILES) {
         return PROFILE_MAX;
@@ -211,7 +211,7 @@ struct power_module HAL_MODULE_INFO_SYM = {
         .hal_api_version = HARDWARE_HAL_API_VERSION,
         .id = POWER_HARDWARE_MODULE_ID,
         .name = "msm8226 Power HAL",
-        .author = "The CyanogenMod Project",
+        .author = "The XPerience Project",
         .methods = &power_module_methods,
     },
 
