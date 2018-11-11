@@ -34,6 +34,7 @@ ro.bluetooth.sap=true
 ro.bluetooth.dun=true
 ro.bluetooth.hfp.ver=1.6
 ro.qualcomm.bt.hci_transport=smd
+ro.qcom.bluetooth.soc=smd
 vendor.qcom.bluetooth.soc=smd
 
 # Display
