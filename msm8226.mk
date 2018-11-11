@@ -264,6 +264,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libshims_thermal
 
+# TextClassifier smart selection model files
+PRODUCT_PACKAGES += \
+    textclassifier.bundle1
+
 # /system FS resize
 PRODUCT_PACKAGES += \
     e2fsck_static \
