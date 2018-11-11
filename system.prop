@@ -66,6 +66,9 @@ persist.radio.nitz_sons_1=
 persist.radio.nitz_sons_2=
 persist.radio.nitz_sons_3=
 
+# Perf
+sys.use_fifo_ui=1
+
 # Qualcomm
 persist.timed.enable=true
 ro.qualcomm.cabl=0
