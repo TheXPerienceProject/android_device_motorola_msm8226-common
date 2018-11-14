@@ -15,7 +15,8 @@
 #
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
+GAPPS_VARIANT := pico
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
 $(call inherit-product, vendor/motorola/msm8226-common/msm8226-common-vendor.mk)
 
 # Overlay
