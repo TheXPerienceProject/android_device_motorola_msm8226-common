@@ -54,3 +54,10 @@ def ResizeSystem(info):
     # However, there might be errors caused by resize2fs
     info.script.AppendExtra('run_program("%s", "-fy", "%s");'
                             % (e2fsck, system_block))
+
+def FullOTA_InstallEnd(info):
+  info.script.Print("Removing Files to allow Gapps installation...")
+  info.script.Mount("/system")
+  info.script.AppendExtra('run_program("/sbin/sh", "/tmp/install/bin/post_install.sh");')
+  info.script.Unmount("/system")
+

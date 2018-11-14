@@ -15,8 +15,6 @@
 #
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-GAPPS_VARIANT := pico
-$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
 $(call inherit-product, vendor/motorola/msm8226-common/msm8226-common-vendor.mk)
 
 # Overlay
@@ -222,6 +220,10 @@ PRODUCT_PACKAGES += \
 # Perf
 PRODUCT_PACKAGES += \
     libshims_atomic
+
+# Post intallation script
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/post_install.sh:install/bin/post_install.sh
 
 # Power
 PRODUCT_PACKAGES += \
