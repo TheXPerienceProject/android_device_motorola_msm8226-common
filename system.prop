@@ -25,6 +25,7 @@ use.voice.path.for.pcm.voip=true
 persist.vendor.audio.hw.binder.size_kbyte=1024
 
 # Bluetooth
+vendor.qcom.bluetooth.soc=pronto
 qcom.bt.le_dev_pwr_class=1
 ro.qualcomm.bluetooth.opp=true
 ro.qualcomm.bluetooth.hfp=true
@@ -37,8 +38,6 @@ ro.bluetooth.sap=true
 ro.bluetooth.dun=true
 ro.bluetooth.hfp.ver=1.6
 ro.qualcomm.bt.hci_transport=smd
-ro.qcom.bluetooth.soc=smd
-vendor.qcom.bluetooth.soc=smd
 
 # Display
 debug.hwui.use_buffer_age=false
