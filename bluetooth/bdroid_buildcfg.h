@@ -45,3 +45,4 @@ inline const char* BtmGetDefaultName()
 #define BTA_BLE_SKIP_CONN_UPD  FALSE
 #define BTA_DISABLE_DELAY 1000 /* in milliseconds */
 #endif
+#undef PROPERTY_VALUE_MAX
