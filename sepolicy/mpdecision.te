@@ -1,3 +1,4 @@
+type mpdecision_data_file, file_type, core_data_file_type, data_file_type;
 
 #device
 allow mpdecision socket_device:dir w_dir_perms;
