@@ -17,6 +17,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, vendor/motorola/msm8226-common/msm8226-common-vendor.mk)
 
+ifeq ($(GO_BUILD),true)
+    $(call inherit-product, build/target/product/go_defaults.mk)
+endif
+
 # CAF includes
 include device/qcom/common/common.mk
 
