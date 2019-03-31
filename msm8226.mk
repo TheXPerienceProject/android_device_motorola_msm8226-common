@@ -136,7 +136,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=2m \
     dalvik.vm.heapmaxfree=8m
 
-#DeviceSettings
+PRODUCT_PROPERTY_OVERRIDES += \
+    pm.dexopt.shared=quicken
+
+# DeviceSettings
 PRODUCT_PACKAGES += \
     DeviceSettings
 
