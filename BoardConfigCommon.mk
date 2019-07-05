@@ -165,8 +165,6 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 USE_OPENGL_RENDERER := true
 SF_START_GRAPHICS_ALLOCATOR_SERVICE := true
 
-TARGET_RIL_VARIANT := caf
-
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
