@@ -1,4 +1,5 @@
 allow rild cutback_data_file:dir r_dir_perms;
+allow rild cutback_data_file:sock_file create_file_perms;
 
 allow rild hal_wifi_supplicant_default:unix_dgram_socket { sendto write };
 
@@ -7,6 +8,10 @@ allow rild system_file:file execute_no_trans;
 allow rild vendor_file:file { r_file_perms ioctl };
 
 allow rild wpa_socket:sock_file write;
+
+allow rild proc:file r_file_perms;
+
+allow rild rild:capability dac_override;
 
 r_dir_file(rild, sysfs_battery_supply)
 r_dir_file(rild, sysfs_usb_supply)

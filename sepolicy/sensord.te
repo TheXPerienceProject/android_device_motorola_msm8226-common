@@ -2,7 +2,9 @@ type sensord, domain;
 type sensord_exec, exec_type, file_type;
 init_daemon_domain(sensord)
 
+allow sensord drmserver:dir r_dir_perms;
 allow sensord drmserver:file r_file_perms;
+allow sensord drmserver:lnk_file r_file_perms;
 
 allow sensord self:capability { dac_override fowner fsetid sys_ptrace };
 
@@ -12,3 +14,15 @@ allow sensord init:lnk_file r_file_perms;
 
 allow sensord input_device:chr_file r_file_perms;
 allow sensord input_device:dir search;
+
+allow sensord sensors_data_file:dir create_dir_perms;
+allow sensord sensors_data_file:fifo_file create_file_perms;
+allow sensord sensors_data_file:file create_file_perms;
+allow sensord system_data_file:dir create_dir_perms;
+
+allow sensord sysfs_devices_sensors:dir search;
+allow sensord sysfs_devices_sensors:file rw_file_perms;
+
+allow sensord thermal-engine:file r_file_perms;
+
+type_transition sensord system_data_file:file sensors_data_file;

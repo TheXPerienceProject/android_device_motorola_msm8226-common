@@ -1,0 +1,12 @@
+#interface=android.hardware.bluetooth::IBluetoothHci
+allow shell hal_bluetooth_hwservice:hwservice_manager find;
+allow shell hal_bluetooth_default:binder call;
+
+#CryptoFactory
+allow shell hal_drm_hwservice:hwservice_manager find;
+allow shell hal_drm_default:binder call;
+
+#interface=android.hardware.health::IHealth
+allow shell hal_health_hwservice:hwservice_manager find;
+allow shell hal_health_default:binder call;
+

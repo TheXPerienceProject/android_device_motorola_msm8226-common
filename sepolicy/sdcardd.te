@@ -1,0 +1,2 @@
+
+allow sdcardd userdata_block_device:blk_file read;
