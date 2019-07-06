@@ -247,6 +247,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 # Radio
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0 \
     libcnefeatureconfig
 
 # Telephony packages we dont have ims here but we need those libs
