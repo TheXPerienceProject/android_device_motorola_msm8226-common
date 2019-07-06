@@ -193,9 +193,10 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
     keystore.msm8226
 
-#Launcher3Go
+# NightfallQuickStepGo
 PRODUCT_PACKAGES += \
-    Launcher3PixelGo
+    NightfallQuickStepGo
+
 
 # Lights
 PRODUCT_PACKAGES += \
