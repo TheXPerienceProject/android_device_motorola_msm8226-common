@@ -5,7 +5,6 @@
 /(vendor|system/vendor)/bin/init\.mmi\.touch\.sh            u:object_r:mmi_touch_sh_exec:s0
 /(vendor|system/vendor)/bin/akmd8963                        u:object_r:akmd8963_exec:s0
 /(vendor|system/vendor)/bin/dbvc_atvc_property_set          u:object_r:atvc_exec:s0
-/(vendor|system/vendor)/bin/thermal-engine                  u:object_r:thermal-engine_exec:s0
 
 # MPDecision
 /data/system/default_values                                 u:object_r:mpdecision_data_file:s0
