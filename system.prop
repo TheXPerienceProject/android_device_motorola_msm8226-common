@@ -1,10 +1,12 @@
 
 # Art
-dalvik.vm.dex2oat-flags=--no-watch-dog
-dalvik.vm.extra-opts=-Xcompiler-option --inline-max-code-units=0
 dalvik.vm.boot-dex2oat-threads=4
+dalvik.vm.checkjni=false
+dalvik.vm.dex2oat-flags=--no-watch-dog
 dalvik.vm.dex2oat-threads=4
 dalvik.vm.image-dex2oat-threads=4
+dalvik.vm.verify-bytecode=false
+persist.sys.purgeable_assets=1
 
 # Audio
 audio.offload.disable=true
