@@ -69,8 +69,6 @@ on fs
     mount ext3 loop@/cache/pds-dump.img /pds
     restorecon /pds
 
-    # activate zram
-    swapon_all fstab.qcom
     write /proc/sys/vm/page-cluster 0
 
 on post-fs-data
@@ -664,6 +662,9 @@ on charger
     write /sys/devices/system/cpu/cpu3/online 1
 
 on property:sys.boot_completed=1
+    # Enable ZRAM on boot_complete
+    swapon_all /vendor/etc/fstab.qcom
+
     write /sys/module/lpm_levels/enable_low_power/l2 4
     write /sys/module/msm_pm/modes/cpu0/power_collapse/suspend_enabled 1
     write /sys/module/msm_pm/modes/cpu1/power_collapse/suspend_enabled 1
