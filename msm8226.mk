@@ -249,6 +249,20 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
 
+# Telephony packages we dont have ims here but we need those libs
+# to avoid crashes
+PRODUCT_PACKAGES += \
+    telephony-ext \
+    ims-ext-common \
+    services-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
+# IMS
+PRODUCT_PACKAGES += \
+    com.android.ims.rcsmanager
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
