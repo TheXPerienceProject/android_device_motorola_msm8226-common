@@ -1,0 +1,5 @@
+allow untrusted_app_25 theme_data_file:file r_file_perms;
+allow untrusted_app theme_data_file:file r_file_perms;
+allow priv_app theme_data_file:file r_file_perms;
+allow platform_app theme_data_file:file r_file_perms;
+allow bluetooth theme_data_file:file r_file_perms;

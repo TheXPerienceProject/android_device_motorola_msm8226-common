@@ -47,7 +47,7 @@ on early-init
 
     # Optimize boot and avoid large boot time
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "ondemand"
-	write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1190400
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1190400
 
 on init
 

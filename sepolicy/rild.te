@@ -13,6 +13,8 @@ allow rild proc:file r_file_perms;
 
 allow rild rild:capability dac_override;
 
+allow rild smem_log_device:chr_file { ioctl read write open };
+
 r_dir_file(rild, sysfs_battery_supply)
 r_dir_file(rild, sysfs_usb_supply)
 
