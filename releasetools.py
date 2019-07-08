@@ -60,4 +60,4 @@ def FullOTA_InstallEnd(info):
   info.script.Mount("/system")
   info.script.AppendExtra('run_program("/sbin/sh", "/tmp/install/bin/post_install.sh");')
   info.script.Unmount("/system")
-
+  info.script.Print("Done!...")  
