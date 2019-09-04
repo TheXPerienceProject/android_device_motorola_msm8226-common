@@ -23,6 +23,8 @@ endif
 
 # CAF includes
 include device/qcom/common/common.mk
+# Soong
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
