@@ -178,6 +178,9 @@ SF_START_GRAPHICS_ALLOCATOR_SERVICE := true
 #include device/qcom/sepolicy-legacy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
+BOARD_SEPOLICY_DIRS += \
+	$(VENDOR_PATH)/sepolicy-tmp
+
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/bin/thermal-engine|libshims_thermal.so \
