@@ -32,8 +32,6 @@ on early-init
 
     mount debugfs /sys/kernel/debug /sys/kernel/debug mode=755
 
-    symlink /data/tombstones /tombstones
-
     # Set permissions so radio can read
     chmod 0444 /proc/cmdline
 
@@ -86,7 +84,7 @@ on post-fs
 
 on post-fs-data
     mkdir /data/tombstones 0771 system system
-    mkdir /tombstones/modem 0771 system system
+    mkdir /data/tombstones/modem 0771 system system
 
     mkdir /data/vendor/bluetooth 0770 bluetooth bluetooth
     mkdir /data/vendor/ramdump/bluetooth 0770 bluetooth bluetooth
