@@ -158,8 +158,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     pm.dexopt.shared=quicken
 
 # DeviceSettings
-PRODUCT_PACKAGES += \
-    DeviceSettings
+#PRODUCT_PACKAGES += \
+#    DeviceSettings
 
 # DRM
 PRODUCT_PACKAGES += \
