@@ -172,7 +172,6 @@ DISABLE_IPA_FROM_VENDOR_SOURCE := true
 # Render
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 USE_OPENGL_RENDERER := true
-SF_START_GRAPHICS_ALLOCATOR_SERVICE := true
 
 # SELinux
 #include device/qcom/sepolicy-legacy/sepolicy.mk
