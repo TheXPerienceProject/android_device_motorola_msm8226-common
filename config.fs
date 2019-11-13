@@ -65,7 +65,7 @@ value:5017
 value:5018
 
 [AID_VENDOR_MOT_DTV]
-value:9019
+value:5019
 
 [firmware/]
 mode: 0771
