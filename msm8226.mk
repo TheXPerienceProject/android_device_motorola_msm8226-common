@@ -401,7 +401,7 @@ PRODUCT_PACKAGES += \
 # WiFi HAL
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi.hostapd@1.0 \
-    vendor.qti.hardware.wifi.supplicant@1.0
+    vendor.qti.hardware.wifi.supplicant@1.0 \
     android.hardware.wifi@1.0-service.legacy
 
 # Wifi

@@ -20,6 +20,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_SRC_FILES := power.c
 LOCAL_SHARED_LIBRARIES := liblog libcutils
+LOCAL_CFLAGS := -Wno-gnu-folding-constant
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := power.msm8226
 include $(BUILD_SHARED_LIBRARY)
