@@ -108,7 +108,10 @@ BOARD_NO_CHARGER_LED := true
 # Basic dexpreopt Go mode
 # Basic dexpreopt
 #WITH_DEXPREOPT := false
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+# Dexpreopt
+WITH_DEXPREOPT_DEBUG_INFO := false
+USE_DEX2OAT_DEBUG := false
+DONT_DEXPREOPT_PREBUILTS := true
 
 
 # Display
