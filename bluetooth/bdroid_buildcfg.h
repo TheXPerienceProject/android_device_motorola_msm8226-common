@@ -23,4 +23,3 @@
 #define BLUETOOTH_QTI_SW TRUE
 #define MAX_L2CAP_CHANNELS    16
 #endif
-#undef PROPERTY_VALUE_MAX
